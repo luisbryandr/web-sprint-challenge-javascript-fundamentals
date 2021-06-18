@@ -57,10 +57,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(){
+    // const displayNames = [];
+    // zooAnimals.forEach(function(item){
+    //   displayNames.push(`name: ${animalNames.animal_name}, scientific: ${scientific_name}`)
+    // });
+    /*Your Code Here*/ //so right now, as I start, I'm thinking I'll need to say const displayNames = [`name:${animal_name}, scientific: ${scientific_name}`] toget the last part of my request
   }
-  
+  console.log('Request 1', animalNames())
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -68,20 +72,26 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(zooAnimals){
+    let lowerCaseNames = []
+   let lowerCaseNames = zooAnimals.map(zooAnimals.animal_name.toLowerCase())
   }
-  
+  console.log('Request 2', lowerCaseNames(zooAnimals))
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(zooAnimals){
+    let lowPopulationAnimals = []
+    zooAnimals.filter(function(item){
+      if(zooAnimals.population < 5)
+      lowPopulationAnimals.push(zooAnimals.population)
+    })
+  return lowPopulationAnimals
   }
-  
+  console.log('Request 3', lowPopulationAnimals(zooAnimals))
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
