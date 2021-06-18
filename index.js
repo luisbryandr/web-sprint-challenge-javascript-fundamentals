@@ -57,11 +57,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(){
-    // const displayNames = [];
-    // zooAnimals.forEach(function(item){
-    //   displayNames.push(`name: ${animalNames.animal_name}, scientific: ${scientific_name}`)
-    // });
+  function animalNames(idk){
+    const displayNames = [];
+    zooAnimals.forEach(function(item){
+     return displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
+    });
+    return displayNames
     /*Your Code Here*/ //so right now, as I start, I'm thinking I'll need to say const displayNames = [`name:${animal_name}, scientific: ${scientific_name}`] toget the last part of my request
   }
   console.log('Request 1', animalNames())
@@ -72,11 +73,13 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(zooAnimals){
-    let lowerCaseNames = []
-   let lowerCaseNames = zooAnimals.map(zooAnimals.animal_name.toLowerCase())
+  function lowerCaseNames(idk){
+   const lowerCase = zooAnimals.map(function(item){
+     return item.animal_name.toLowerCase();
+   });
+   return lowerCase
   }
-  console.log('Request 2', lowerCaseNames(zooAnimals))
+  console.log('Request 2', lowerCaseNames())
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -84,12 +87,12 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(zooAnimals){
-    let lowPopulationAnimals = []
-    zooAnimals.filter(function(item){
-      if(zooAnimals.population < 5)
-      lowPopulationAnimals.push(zooAnimals.population)
-    })
-  return lowPopulationAnimals
+  //   let lowPopulationAnimals = []
+  //   zooAnimals.filter(function(item){
+  //     if(zooAnimals.population < 5)
+  //     lowPopulationAnimals.push(zooAnimals.population)
+  //   })
+  // return lowPopulationAnimals
   }
   console.log('Request 3', lowPopulationAnimals(zooAnimals))
 
