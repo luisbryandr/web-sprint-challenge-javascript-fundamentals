@@ -17,9 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+//nested function can access the variable internal because of closure, functions are able to reach outside of themselves for values, they just can't send values they have, outside of themselves. For example in this scenario, myFunction couldn't reach a variable inside of the nestedFunction if it had one. Also in this scenario the variable internal was declared in a scope outside of the nestedFunction. 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -28,10 +26,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let count = 0;
+  for (let i = 0; i <= number; i++) {
+    count += i;
   }
+  return count 
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
