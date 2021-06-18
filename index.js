@@ -86,15 +86,13 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(zooAnimals){
-  //   let lowPopulationAnimals = []
-  //   zooAnimals.filter(function(item){
-  //     if(zooAnimals.population < 5)
-  //     lowPopulationAnimals.push(zooAnimals.population)
-  //   })
-  // return lowPopulationAnimals
+  function lowPopulationAnimals(){
+    const lowPopAnimals = zooAnimals.filter(function(item){
+      return item.population < 5;
+    });
+  return lowPopAnimals
   }
-  console.log('Request 3', lowPopulationAnimals(zooAnimals))
+  console.log('Request 3', lowPopulationAnimals())
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -103,8 +101,12 @@ const zooAnimals = [
   */
 
   function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+    const totalPop = zooAnimals.reduce(function(accumulator, item){
+        return accumulator + item.population;
+    },0)
+    return totalPop
   }
+  console.log('Request 4', USApop())
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
